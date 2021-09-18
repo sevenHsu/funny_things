@@ -154,8 +154,7 @@ class SnakeGame:
             speed = self.speed + np.digitize(self.total_score, SCORES_LEVEL)
             time.sleep(1 / speed)
 
-    def _disply(self):
-        """主进程循环"""
+    def _disply(self): 
         while True and not self.game_over:
             os.system('clear')
             sys.stdout.write("\r\n{0}\n{1}".format(("Score:" + str(self.total_score)).center(MAP_SIZE, ' '), self.pic))
